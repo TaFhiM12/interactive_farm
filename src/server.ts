@@ -23,6 +23,5 @@ io.on("connection", (socket) => {
 });
 
 httpServer.listen(env.PORT, () => {
-  // eslint-disable-next-line no-console
   console.log(`Server running at http://localhost:${env.PORT}`);
 });

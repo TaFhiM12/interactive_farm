@@ -21,7 +21,6 @@ const randomNumber = (min: number, max: number) => Math.floor(Math.random() * (m
 async function main() {
   const password = await bcrypt.hash("Password123!", 10);
 
-  // Reset dev data so the seed always yields consistent counts.
   await prisma.order.deleteMany();
   await prisma.rentalBooking.deleteMany();
   await prisma.plantTrack.deleteMany();
